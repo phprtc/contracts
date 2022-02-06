@@ -16,4 +16,24 @@ interface ResponseInterface
     public function plain(string $string, int $status = 200, array $headers = []): void;
 
     public function redirect(string $url, array $headers = []): void;
+
+    public function header(string $name, string $value): static;
+
+    public function sendFile(string $path): void;
+
+    public function trailer(string $key, string $value): void;
+
+    public function write(string $data): static;
+
+    public function cookie(
+        string $key,
+        string $value = '',
+        int $expire = 0,
+        string $path = '/',
+        string $domain = '',
+        bool $secure = false,
+        bool $httponly = false,
+        string $samesite = '',
+        string $priority = ''
+    ): static;
 }
