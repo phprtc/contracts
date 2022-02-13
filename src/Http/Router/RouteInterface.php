@@ -72,81 +72,81 @@ interface RouteInterface
      * Add GET to route collection
      *
      * @param string $route
-     * @param callable $action
+     * @param callable|array|string $action
      * @return static
      */
-    public function get(string $route, callable $action): static;
+    public function get(string $route, callable|array|string $action): static;
 
     /**
      * Add POST to route collection
      *
      * @param string $route
-     * @param callable $action
+     * @param callable|array|string $action
      * @return static
      */
-    public function post(string $route, callable $action): static;
+    public function post(string $route, callable|array|string $action): static;
 
     /**
      * Add PUT to route collection
      *
      * @param string $route
-     * @param callable $action
+     * @param callable|array|string $action
      * @return static
      */
-    public function put(string $route, callable $action): static;
+    public function put(string $route, callable|array|string $action): static;
 
     /**
      * Add PATCH to route collection
      *
      * @param string $route
-     * @param callable $action
+     * @param callable|array|string $action
      * @return static
      */
-    public function patch(string $route, callable $action): static;
+    public function patch(string $route, callable|array|string $action): static;
 
     /**
      * Add DELETE to route collection
      *
      * @param string $route
-     * @param callable $action
+     * @param callable|array|string $action
      * @return static
      */
-    public function delete(string $route, callable $action): static;
+    public function delete(string $route, callable|array|string $action): static;
 
     /**
      * Add HEAD to route collection
      * @param string $route
-     * @param callable $action
+     * @param callable|array|string $action
      * @return static
      */
-    public function head(string $route, callable $action): static;
+    public function head(string $route, callable|array|string $action): static;
 
     /**
      * Register route to multiple http verbs
      * @param array $methods
      * @param string $uri
-     * @param callable $action
+     * @param callable|array|string $action
      * @return static
      */
-    public function match(array $methods, string $uri, callable $action): static;
+    public function match(array $methods, string $uri, callable|array|string $action): static;
 
     /**
      * Register multiple paths to single handler
      *
      * @param array $paths
      * @param string $method
-     * @param callable $action
+     * @param callable|array|string $action
      * @return static
      */
-    public function any(array $paths, string $method, callable $action): static;
+    public function any(array $paths, string $method, callable|array|string $action): static;
 
     /**
      * @param array $methods
      * @param array $paths
-     * @param callable $action
+     * @param callable|array|string $action
      * @return static
      */
-    public function matchAny(array $methods, array $paths, callable $action): static;
+    public function matchAny(array $methods, array $paths, callable|array|string $action): static;
 
     /**
      * This single route declaration creates multiple routes to handle a variety of actions on the resource.
