@@ -14,5 +14,5 @@ interface CollectorInterface
 
     public function register(): static;
 
-    public function getFastRouteCollector(bool $createNew = false): object;
+    public function getFastRouteCollector(bool $createNew = false): \FastRoute\RouteCollector;
 }

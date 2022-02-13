@@ -2,7 +2,7 @@
 
 namespace RTC\Contracts\Http;
 
-use QuickRoute\Router\DispatchResult;
+use RTC\Contracts\Http\Router\DispatchResultInterface;
 
 interface RequestInterface extends \Psr\Http\Message\RequestInterface
 {
@@ -12,5 +12,5 @@ interface RequestInterface extends \Psr\Http\Message\RequestInterface
 
     public function getMiddleware(): RequestMiddlewareInterface;
 
-    public function getRouteDispatchResult(): DispatchResult;
+    public function getRouteDispatchResult(): DispatchResultInterface;
 }

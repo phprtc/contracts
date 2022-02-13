@@ -6,6 +6,8 @@ use Swoole\WebSocket\Frame;
 
 interface FrameInterface
 {
+    public function __construct(Frame $frame);
+
     /**
      * Returns Swoole frame object
      *
@@ -19,4 +21,11 @@ interface FrameInterface
      * @return array
      */
     public function getMessage(): array;
+
+    /**
+     * Returns json-decoded message array
+     *
+     * @return string
+     */
+    public function getRawMessage(): string;
 }

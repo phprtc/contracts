@@ -2,7 +2,7 @@
 
 namespace RTC\Contracts;
 
-class Exeption extends \Exception
+class Exception extends \Exception
 {
 
 }
