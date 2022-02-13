@@ -3,6 +3,7 @@
 namespace RTC\Contracts\Http;
 
 use RTC\Contracts\Http\Router\DispatchResultInterface;
+use Throwable;
 
 interface RequestInterface extends \Psr\Http\Message\RequestInterface
 {
@@ -18,8 +19,8 @@ interface RequestInterface extends \Psr\Http\Message\RequestInterface
      * This method will send error response to client
      * this should be used in try-catch statement
      *
-     * @param callable $callback
+     * @param Throwable $exception
      * @return void
      */
-    public function handleException(callable $callback): void;
+    public function handleException(Throwable $exception): void;
 }
