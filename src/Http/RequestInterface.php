@@ -15,6 +15,8 @@ interface RequestInterface extends \Psr\Http\Message\RequestInterface
 
     public function getRouteDispatchResult(): DispatchResultInterface;
 
+    public function getKernel(): KernelInterface;
+
     /**
      * This method will send error response to client
      * this should be used in try-catch statement
