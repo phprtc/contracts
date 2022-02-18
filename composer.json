@@ -19,6 +19,6 @@
         "guzzlehttp/psr7": "^2.0"
     },
     "require-dev": {
-        "swoole/ide-helper": "^4.7"
+        "openswoole/ide-helper": "^4.10"
     }
 }
