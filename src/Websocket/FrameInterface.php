@@ -25,9 +25,9 @@ interface FrameInterface
     /**
      * Returns payload-sent time
      *
-     * @return string
+     * @return string|null
      */
-    public function getTime(): string;
+    public function getTime(): string|null;
 
     /**
      * Returns json-decoded message array
