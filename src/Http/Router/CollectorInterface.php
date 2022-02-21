@@ -2,6 +2,8 @@
 
 namespace RTC\Contracts\Http\Router;
 
+use FastRoute\RouteCollector;
+
 interface CollectorInterface
 {
     public function collectFile(string $filePath, array $routesInfo = []): static;
@@ -14,7 +16,7 @@ interface CollectorInterface
 
     public function register(): static;
 
-    public function getFastRouteCollector(bool $createNew = false): \FastRoute\RouteCollector;
+    public function getFastRouteCollector(bool $createNew = false): RouteCollector;
 
     public function getCollectedRoutes(): array;
 

@@ -12,7 +12,7 @@ abstract class HttpException extends Exception
         string           $message,
         int              $code = 0,
         Throwable|null   $previous = null
-    );
+    ): never;
 
     abstract public function getRequest(): RequestInterface;
 }

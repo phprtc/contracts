@@ -28,11 +28,11 @@ interface ResponseInterface
     public function cookie(
         string $key,
         string $value = '',
-        int $expire = 0,
+        int    $expire = 0,
         string $path = '/',
         string $domain = '',
-        bool $secure = false,
-        bool $httponly = false,
+        bool   $secure = false,
+        bool   $httponly = false,
         string $samesite = '',
         string $priority = ''
     ): static;

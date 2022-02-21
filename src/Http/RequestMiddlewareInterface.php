@@ -2,7 +2,6 @@
 
 namespace RTC\Contracts\Http;
 
-use RTC\Http\Exceptions\MiddlewareException;
 use SplQueue;
 
 interface RequestMiddlewareInterface
@@ -21,7 +20,7 @@ interface RequestMiddlewareInterface
      * Executes next middleware in the queue
      *
      * @return void
-     * @throws MiddlewareException
+     * @throws HttpException
      */
     public function next(): void;
 
@@ -49,7 +48,7 @@ interface RequestMiddlewareInterface
     /**
      * Retrieve middlewares queue object
      *
-     * @return SplQueue
+     * @return SplQueue<MiddlewareInterface>
      */
     public function getQueue(): SplQueue;
 }

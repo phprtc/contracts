@@ -3,7 +3,6 @@
 namespace RTC\Contracts\Websocket;
 
 use RTC\Server\Server;
-use RTC\Websocket\Frame;
 use Throwable;
 
 interface WebsocketHandlerInterface
@@ -14,11 +13,11 @@ interface WebsocketHandlerInterface
      * Method that will be called when message is received
      *
      * @param ConnectionInterface $connection
-     * @param Frame $frame
+     * @param FrameInterface $frame
      * @return void
      * @throws Throwable
      */
-    public function onMessage(ConnectionInterface $connection, Frame $frame): void;
+    public function onMessage(ConnectionInterface $connection, FrameInterface $frame);
 
     /**
      * Method that will be called when new connection is received

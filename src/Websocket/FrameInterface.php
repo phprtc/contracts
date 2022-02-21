@@ -9,23 +9,30 @@ interface FrameInterface
     public function __construct(Frame $frame);
 
     /**
-     * Returns Swoole frame object
+     * Gets message sent from client
      *
-     * @return Frame
+     * @return mixed
      */
-    public function getFrame(): Frame;
+    public function getMessage(): mixed;
 
     /**
-     * Returns json-decoded message array
+     * Returns command name sent by client
      *
-     * @return array
+     * @return string|null
      */
-    public function getMessage(): array;
+    public function getCommand(): string|null;
 
     /**
-     * Returns json-decoded message array
+     * Returns payload-sent time
      *
      * @return string
      */
-    public function getRawMessage(): string;
+    public function getTime(): string;
+
+    /**
+     * Returns json-decoded message array
+     *
+     * @return PayloadInterface
+     */
+    public function getPayload(): PayloadInterface;
 }
