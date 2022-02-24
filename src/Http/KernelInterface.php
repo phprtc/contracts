@@ -11,9 +11,9 @@ interface KernelInterface
     public function getRouteMiddlewares(): array;
 
     /**
-     * Specifies whether to use default http middlewares
+     * Specifies whether to use default middlewares
      *
      * @return bool
      */
-    public function shouldUseDefaultHttpMiddlewares(): bool;
+    public function shouldUseDefaultMiddlewares(): bool;
 }
