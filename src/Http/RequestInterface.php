@@ -2,7 +2,6 @@
 
 namespace RTC\Contracts\Http;
 
-use RTC\Contracts\Http\Router\CollectorInterface;
 use RTC\Contracts\Http\Router\DispatchResultInterface;
 use Throwable;
 
@@ -17,10 +16,6 @@ interface RequestInterface extends \Psr\Http\Message\RequestInterface
     public function getRouteDispatchResult(): DispatchResultInterface;
 
     public function getKernel(): KernelInterface;
-
-    public function getRouteCollector(): CollectorInterface;
-
-    public function hasRouteCollector(): bool;
 
     /**
      * This method will send error response to client
