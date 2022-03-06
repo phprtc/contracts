@@ -6,6 +6,8 @@ interface KernelInterface
 {
     public function getHandler(): HttpHandlerInterface;
 
+    public function hasHandler(): bool;
+
     public function getMiddlewares(): array;
 
     public function getDefaultMiddlewares(): array;
