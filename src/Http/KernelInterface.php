@@ -4,6 +4,8 @@ namespace RTC\Contracts\Http;
 
 interface KernelInterface
 {
+    public function getHandler(): HttpHandlerInterface;
+
     public function getMiddlewares(): array;
 
     public function getDefaultMiddlewares(): array;
