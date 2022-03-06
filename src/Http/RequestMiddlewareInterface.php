@@ -48,5 +48,5 @@ interface RequestMiddlewareInterface
      *
      * @return array<MiddlewareInterface>
      */
-    public function getQueue(): array;
+    public function getMiddlewares(): array;
 }
