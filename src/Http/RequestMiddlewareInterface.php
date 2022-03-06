@@ -2,8 +2,6 @@
 
 namespace RTC\Contracts\Http;
 
-use SplQueue;
-
 interface RequestMiddlewareInterface
 {
     public function __construct(RequestInterface $request, array $middlewares);
@@ -48,7 +46,7 @@ interface RequestMiddlewareInterface
     /**
      * Retrieve middlewares queue object
      *
-     * @return SplQueue<MiddlewareInterface>
+     * @return array<MiddlewareInterface>
      */
-    public function getQueue(): SplQueue;
+    public function getQueue(): array;
 }
