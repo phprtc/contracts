@@ -25,6 +25,7 @@
     "require-dev": {
         "openswoole/ide-helper": "^4.10",
         "phpstan/phpstan": "^1.4",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "jetbrains/phpstorm-attributes": "^1.0"
     }
 }
