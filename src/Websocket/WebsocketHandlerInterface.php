@@ -2,12 +2,20 @@
 
 namespace RTC\Contracts\Websocket;
 
-use RTC\Server\Server;
+use RTC\Contracts\Server\ServerInterface;
 use Throwable;
 
 interface WebsocketHandlerInterface
 {
-    public function __construct(Server $server);
+    public function __construct(ServerInterface $server);
+
+    /**
+     * This method will be invoked when server instantiation is finished
+     *
+     * @return void
+     * @throws Throwable
+     */
+    public function onReady(): void;
 
     /**
      * Method that will be called when message is received
@@ -17,7 +25,7 @@ interface WebsocketHandlerInterface
      * @return void
      * @throws Throwable
      */
-    public function onMessage(ConnectionInterface $connection, FrameInterface $frame);
+    public function onMessage(ConnectionInterface $connection, FrameInterface $frame): void;
 
     /**
      * Method that will be called when new connection is received

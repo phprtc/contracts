@@ -2,11 +2,11 @@
 
 namespace RTC\Contracts\Websocket;
 
-use RTC\Server\Server;
+use RTC\Contracts\Server\ServerInterface;
 
 interface ConnectionInterface
 {
-    public function __construct(Server $server, int $fd);
+    public function __construct(ServerInterface $server, int $fd);
 
     /**
      * Send message to this connection

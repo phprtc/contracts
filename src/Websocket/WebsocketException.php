@@ -12,7 +12,7 @@ abstract class WebsocketException extends Exception
         string              $message,
         int                 $code = 0,
         Throwable|null      $previous = null
-    );
+    ): void;
 
     abstract public function getConnection(): ConnectionInterface;
 }

@@ -16,6 +16,11 @@ interface CollectorInterface
 
     public function register(): static;
 
+    /**
+     * @param bool $createNew
+     * @return RouteCollector
+     * @phpstan-ignore-next-line
+     */
     public function getFastRouteCollector(bool $createNew = false): RouteCollector;
 
     public function getCollectedRoutes(): array;
