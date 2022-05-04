@@ -16,4 +16,11 @@ interface ServerInterface
     public function run(): void;
 
     public function set(array $settings): static;
+
+    public function push(
+        int    $fd,
+        string $data,
+        int    $opcode = 1,
+        int    $flags = SWOOLE_WEBSOCKET_FLAG_FIN
+    ): void;
 }
