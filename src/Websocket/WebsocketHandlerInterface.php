@@ -11,9 +11,6 @@ interface WebsocketHandlerInterface
 
     /**
      * This method will be invoked when server instantiation is finished
-     *
-     * @return void
-     * @throws Throwable
      */
     public function onReady(): void;
 
