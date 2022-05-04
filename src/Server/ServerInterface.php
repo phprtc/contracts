@@ -17,6 +17,8 @@ interface ServerInterface
 
     public function set(array $settings): static;
 
+    public function exists(int $fd): bool;
+
     public function push(
         int    $fd,
         string $data,
