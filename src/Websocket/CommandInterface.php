@@ -6,7 +6,7 @@ use Swoole\WebSocket\Frame;
 
 interface CommandInterface
 {
-    public function __construct(Frame $frame);
+    public function __construct(Frame $frame, array $decodedMessage = []);
 
     /**
      * Gets message sent from client
