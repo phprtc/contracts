@@ -25,6 +25,16 @@ interface WebsocketHandlerInterface
     public function onMessage(ConnectionInterface $connection, FrameInterface $frame): void;
 
     /**
+     * Method that will be called when command-oriented message is received
+     *
+     * @param ConnectionInterface $connection
+     * @param FrameInterface $frame
+     * @return void
+     * @throws Throwable
+     */
+    public function onCommand(ConnectionInterface $connection, FrameInterface $frame): void;
+
+    /**
      * Method that will be called when new connection is received
      *
      * @param ConnectionInterface $connection
