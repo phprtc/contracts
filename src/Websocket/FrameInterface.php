@@ -46,8 +46,8 @@ interface FrameInterface
     /**
      * Returns time which the server receives this payload
      *
-     * @return string
+     * @return float
      */
-    public function getServerTime(): string;
+    public function getServerTime(): float;
 
 }
