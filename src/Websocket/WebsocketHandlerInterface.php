@@ -20,7 +20,6 @@ interface WebsocketHandlerInterface
      * @param ConnectionInterface $connection
      * @param FrameInterface $frame
      * @return void
-     * @throws Throwable
      */
     public function onMessage(ConnectionInterface $connection, FrameInterface $frame): void;
 
@@ -30,7 +29,6 @@ interface WebsocketHandlerInterface
      * @param ConnectionInterface $connection
      * @param FrameInterface $frame
      * @return void
-     * @throws Throwable
      */
     public function onCommand(ConnectionInterface $connection, FrameInterface $frame): void;
 
