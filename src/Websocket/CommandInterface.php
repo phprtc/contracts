@@ -34,5 +34,5 @@ interface CommandInterface
      *
      * @return FrameInterface
      */
-    public function getPayload(): FrameInterface;
+    public function getFrame(): FrameInterface;
 }
