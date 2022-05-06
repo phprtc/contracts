@@ -9,30 +9,45 @@ interface FrameInterface
     public function __construct(Frame $frame);
 
     /**
-     * Gets message sent from client
+     * Returns message sent from client
      *
-     * @return mixed
+     * @return string
      */
-    public function getMessage(): mixed;
+    public function getRaw(): string;
 
     /**
-     * Returns command name sent by client
+     * Returns json-decoded client-sent message
      *
-     * @return string|null
+     * @return array
      */
-    public function getCommand(): string|null;
+    public function getDecoded(): array;
 
     /**
-     * Returns payload-sent time
+     * The ID of the WebSocket client connection, this can be used to push data to the client
      *
-     * @return string|null
+     * @return int
      */
-    public function getTime(): string|null;
+    public function getFd(): int;
 
     /**
-     * Returns json-decoded message array
+     * The opcode type of WebSocket data frame, type of data received
      *
-     * @return PayloadInterface
+     * @return int
      */
-    public function getPayload(): PayloadInterface;
+    public function getOpCode(): int;
+
+    /**
+     * Returns Swoole frame object
+     *
+     * @return Frame
+     */
+    public function getSwooleFrame(): Frame;
+
+    /**
+     * Returns time which the server receives this payload
+     *
+     * @return string
+     */
+    public function getServerTime(): string;
+
 }
