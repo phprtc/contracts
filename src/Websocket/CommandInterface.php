@@ -2,11 +2,9 @@
 
 namespace RTC\Contracts\Websocket;
 
-use Swoole\WebSocket\Frame;
-
 interface CommandInterface
 {
-    public function __construct(Frame $frame, array $decodedMessage = []);
+    public function __construct(FrameInterface $frame);
 
     /**
      * Gets message sent from client
