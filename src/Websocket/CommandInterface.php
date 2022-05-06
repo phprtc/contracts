@@ -18,16 +18,16 @@ interface CommandInterface
     /**
      * Returns command name sent by client
      *
-     * @return string|null
+     * @return string
      */
-    public function getCommand(): string|null;
+    public function getCommand(): string;
 
     /**
      * Returns payload-sent time
      *
-     * @return string|null
+     * @return string
      */
-    public function getTime(): string|null;
+    public function getTime(): string;
 
     /**
      * Returns json-decoded message array
