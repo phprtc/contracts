@@ -1,10 +1,12 @@
 <?php
 
-namespace RTC\Contracts\Websocket;
+namespace RTC\Contracts\SSS;
+
+use Swoole\Http\Response;
 
 interface ConnectionInterface
 {
-    public function __construct(int $fd);
+    public function __construct(int $fd, Response $response);
 
     /**
      * Send message to this connection

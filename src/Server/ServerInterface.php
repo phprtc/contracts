@@ -25,4 +25,6 @@ interface ServerInterface
         int    $opcode = 1,
         int    $flags = SWOOLE_WEBSOCKET_FLAG_FIN
     ): void;
+
+    public static function get(): static;
 }
