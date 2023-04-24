@@ -21,6 +21,8 @@ interface ResponseInterface
 
     public function sendFile(string $path): void;
 
+    public function serveHtmlFile(string $path): void;
+
     public function trailer(string $key, string $value): void;
 
     public function write(string $data): static;
