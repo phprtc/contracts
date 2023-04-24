@@ -24,10 +24,10 @@ interface WebsocketHandlerInterface
      * Method that will be called when command-oriented message is received
      *
      * @param ConnectionInterface $connection
-     * @param CommandInterface $command
+     * @param EventInterface $command
      * @return void
      */
-    public function onCommand(ConnectionInterface $connection, CommandInterface $command): void;
+    public function onCommand(ConnectionInterface $connection, EventInterface $command): void;
 
     /**
      * Method that will be called when new connection is received

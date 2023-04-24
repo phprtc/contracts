@@ -2,7 +2,7 @@
 
 namespace RTC\Contracts\Websocket;
 
-interface CommandInterface
+interface EventInterface
 {
     public function __construct(FrameInterface $frame);
 
@@ -14,11 +14,11 @@ interface CommandInterface
     public function getMessage(): mixed;
 
     /**
-     * Returns command name sent by client
+     * Returns event name sent by client
      *
      * @return string
      */
-    public function getCommand(): string;
+    public function getEvent(): string;
 
     /**
      * Returns payload-sent time
