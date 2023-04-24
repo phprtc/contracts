@@ -9,14 +9,14 @@ interface ConnectionInterface
     /**
      * Send message to this connection
      *
-     * @param string $command
+     * @param string $event
      * @param mixed $data
      * @param int $opcode
      * @param int $flags
      * @return void
      */
     public function send(
-        string $command,
+        string $event,
         mixed  $data,
         int    $opcode = 1,
         int    $flags = SWOOLE_WEBSOCKET_FLAG_FIN
