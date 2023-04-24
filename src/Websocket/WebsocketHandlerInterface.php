@@ -21,13 +21,13 @@ interface WebsocketHandlerInterface
     public function onMessage(ConnectionInterface $connection, FrameInterface $frame): void;
 
     /**
-     * Method that will be called when command-oriented message is received
+     * Method that will be called when event-oriented message is received
      *
      * @param ConnectionInterface $connection
-     * @param EventInterface $command
+     * @param EventInterface $event
      * @return void
      */
-    public function onCommand(ConnectionInterface $connection, EventInterface $command): void;
+    public function onEvent(ConnectionInterface $connection, EventInterface $event): void;
 
     /**
      * Method that will be called when new connection is received

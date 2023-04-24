@@ -21,6 +21,14 @@ interface EventInterface
     public function getEvent(): string;
 
     /**
+     * Check whether event is equal to given value
+     *
+     * @param string $value
+     * @return bool
+     */
+    public function eventIs(string $value): bool;
+
+    /**
      * Returns payload-sent time
      *
      * @return string
