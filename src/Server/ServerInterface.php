@@ -8,7 +8,7 @@ use Swoole\Http\Server;
 
 interface ServerInterface
 {
-    public function __construct(string $host, int $port, int $size);
+    public function __construct(string $host, int $port, int $wsClientSize);
 
     public function getServer(): Server;
 
@@ -30,6 +30,8 @@ interface ServerInterface
     public function createRoom(string $name, int $size): RoomInterface;
 
     public function roomExists(string $name): bool;
+
+    public function getRoom(string $name): RoomInterface;
 
     public function attachRoom(RoomInterface $room): static;
 
