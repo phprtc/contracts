@@ -3,11 +3,12 @@
 namespace RTC\Contracts\Server;
 
 use Closure;
+use RTC\Contracts\Websocket\RoomInterface;
 use Swoole\Http\Server;
 
 interface ServerInterface
 {
-    public function __construct(string $host, int $port);
+    public function __construct(string $host, int $port, int $size);
 
     public function getServer(): Server;
 
@@ -18,6 +19,8 @@ interface ServerInterface
     public function set(array $settings): static;
 
     public function exists(int $fd): bool;
+
+    public function createWebsocketRoom(string $name, int $size): RoomInterface;
 
     public function push(
         int    $fd,
