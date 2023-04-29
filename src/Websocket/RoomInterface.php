@@ -93,4 +93,14 @@ interface RoomInterface
         mixed               $message,
         array               $meta = []
     ): int;
+
+    /**
+     * @return string
+     */
+    public function getName(): string;
+
+    /**
+     * @return int
+     */
+    public function getSize(): int;
 }
