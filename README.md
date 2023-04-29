@@ -1,4 +1,5 @@
 # PHP RTC Contracts
+Contracts for the PHPRTC project
 
 ## Installation
 ```
