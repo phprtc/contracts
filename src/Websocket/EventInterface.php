@@ -32,15 +32,7 @@ interface EventInterface
      *
      * @return string
      */
-    public function getIntendedReceiver(): string;
-
-    /**
-     * Check whether intended receiver is equal to given value
-     *
-     * @param string $value
-     * @return bool
-     */
-    public function intendedReceiverIs(string $value): bool;
+    public function getReceiver(): string;
 
     /**
      * Check whether event is equal to given value
