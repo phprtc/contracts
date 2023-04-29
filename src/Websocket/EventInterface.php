@@ -30,9 +30,9 @@ interface EventInterface
     /**
      * Get intended receiver
      *
-     * @return string
+     * @return ReceiverInterface
      */
-    public function getReceiver(): string;
+    public function getReceiver(): ReceiverInterface;
 
     /**
      * Check whether event is equal to given value
