@@ -20,8 +20,6 @@ interface ServerInterface
 
     public function exists(int $fd): bool;
 
-    public function createWebsocketRoom(string $name, int $size): RoomInterface;
-
     public function push(
         int    $fd,
         string $data,
@@ -29,7 +27,11 @@ interface ServerInterface
         int    $flags = SWOOLE_WEBSOCKET_FLAG_FIN
     ): void;
 
-    public function attachWebsocketRoom(RoomInterface $room): static;
+    public function createRoom(string $name, int $size): RoomInterface;
+
+    public function roomExists(string $name): bool;
+
+    public function attachRoom(RoomInterface $room): static;
 
     public static function get(): static;
 }
