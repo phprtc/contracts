@@ -21,13 +21,6 @@ interface EventInterface
     public function getEvent(): string;
 
     /**
-     * Returns room name attached to this message
-     *
-     * @return string|null
-     */
-    public function getRoom(): ?string;
-
-    /**
      * Get intended receiver
      *
      * @return ReceiverInterface
