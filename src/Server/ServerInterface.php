@@ -29,5 +29,7 @@ interface ServerInterface
         int    $flags = SWOOLE_WEBSOCKET_FLAG_FIN
     ): void;
 
+    public function attachWebsocketRoom(RoomInterface $room): static;
+
     public static function get(): static;
 }
