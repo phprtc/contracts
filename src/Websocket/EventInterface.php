@@ -28,6 +28,21 @@ interface EventInterface
     public function getRoom(): ?string;
 
     /**
+     * Get intended receiver
+     *
+     * @return string
+     */
+    public function getIntendedReceiver(): string;
+
+    /**
+     * Check whether intended receiver is equal to given value
+     *
+     * @param string $value
+     * @return bool
+     */
+    public function intendedReceiverIs(string $value): bool;
+
+    /**
      * Check whether event is equal to given value
      *
      * @param string $value
