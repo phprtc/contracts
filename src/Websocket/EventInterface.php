@@ -21,6 +21,13 @@ interface EventInterface
     public function getEvent(): string;
 
     /**
+     * Returns room name attached to this message
+     *
+     * @return string|null
+     */
+    public function getRoom(): ?string;
+
+    /**
      * Check whether event is equal to given value
      *
      * @param string $value
