@@ -31,7 +31,7 @@ interface ServerInterface
     public function sendWSMessage(
         int                $fd,
         string             $event,
-        mixed              $message,
+        mixed              $data,
         WSIntendedReceiver $receiverType,
         string             $receiverId
     ): void;
