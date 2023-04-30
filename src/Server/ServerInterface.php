@@ -3,6 +3,7 @@
 namespace RTC\Contracts\Server;
 
 use Closure;
+use RTC\Contracts\Enums\WSIntendedReceiver;
 use RTC\Contracts\Websocket\RoomInterface;
 use Swoole\Http\Server;
 
@@ -25,6 +26,14 @@ interface ServerInterface
         string $data,
         int    $opcode = 1,
         int    $flags = SWOOLE_WEBSOCKET_FLAG_FIN
+    ): void;
+
+    public function sendWSMessage(
+        int                $fd,
+        string             $event,
+        mixed              $message,
+        WSIntendedReceiver $receiverType,
+        string             $receiverId
     ): void;
 
     public function createRoom(string $name, int $size): RoomInterface;
