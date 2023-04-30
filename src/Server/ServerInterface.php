@@ -33,7 +33,8 @@ interface ServerInterface
         string             $event,
         mixed              $data,
         WSIntendedReceiver $receiverType,
-        string             $receiverId
+        string             $receiverId,
+        array              $meta = [],
     ): void;
 
     public function createRoom(string $name, int $size): RoomInterface;
