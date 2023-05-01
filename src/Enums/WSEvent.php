@@ -7,6 +7,8 @@ enum WSEvent: string
     case PING = 'ping';
     case PONG = 'pong';
 
+    case EVENT_REJECTED = 'event_rejected';
+
     case JOIN = 'join';
     case JOINED = 'joined';
     case MESSAGE = 'message';
