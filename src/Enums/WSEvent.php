@@ -2,8 +2,11 @@
 
 namespace RTC\Contracts\Enums;
 
-enum WSRoomTerm: string
+enum WSEvent: string
 {
+    case PING = 'ping';
+    case PONG = 'pong';
+
     case JOIN = 'join';
     case JOINED = 'joined';
     case MESSAGE = 'message';
