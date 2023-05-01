@@ -11,14 +11,14 @@ interface EventInterface
      *
      * @return mixed
      */
-    public function getMessage(): mixed;
+    public function getData(): mixed;
 
     /**
      * Returns event name sent by client
      *
      * @return string
      */
-    public function getEvent(): string;
+    public function getName(): string;
 
     /**
      * Get intended receiver
