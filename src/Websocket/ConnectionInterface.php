@@ -2,6 +2,8 @@
 
 namespace RTC\Contracts\Websocket;
 
+use RTC\Contracts\Enums\WSSenderType;
+
 interface ConnectionInterface
 {
     public function __construct(int $fd);
@@ -11,15 +13,19 @@ interface ConnectionInterface
      *
      * @param string $event
      * @param mixed $data
+     * @param WSSenderType $senderType
+     * @param string $senderId
      * @param int $opcode
      * @param int $flags
      * @return void
      */
     public function send(
-        string $event,
-        mixed  $data,
-        int    $opcode = 1,
-        int    $flags = SWOOLE_WEBSOCKET_FLAG_FIN
+        string       $event,
+        mixed        $data,
+        WSSenderType $senderType,
+        string       $senderId,
+        int          $opcode = 1,
+        int          $flags = SWOOLE_WEBSOCKET_FLAG_FIN
     ): void;
 
     /**
