@@ -41,4 +41,10 @@ interface ConnectionInterface
      * @return int
      */
     public function getIdentifier(): int;
+
+    /**
+     * @param string $info
+     * @return $this
+     */
+    public function attachInfo(string $info): static;
 }

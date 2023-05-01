@@ -5,6 +5,7 @@ namespace RTC\Contracts\Server;
 use Closure;
 use RTC\Contracts\Enums\WSIntendedReceiver;
 use RTC\Contracts\Enums\WSSenderType;
+use RTC\Contracts\Websocket\ConnectionInterface;
 use RTC\Contracts\Websocket\RoomInterface;
 use Swoole\Http\Server;
 
@@ -49,6 +50,8 @@ interface ServerInterface
     public function getRoom(string $name): RoomInterface;
 
     public function attachRoom(RoomInterface $room): static;
+
+    public function getConnectionInfo(int|ConnectionInterface $connection): ?string;
 
     public static function get(): static;
 }
