@@ -22,7 +22,7 @@ interface ConnectionInterface
     public function send(
         string       $event,
         mixed        $data,
-        WSSenderType $senderType = WSSenderType::SYSTEM,
+        WSSenderType $senderType = WSSenderType::SERVER,
         string       $senderId = 'system',
         int          $opcode = 1,
         int          $flags = SWOOLE_WEBSOCKET_FLAG_FIN
