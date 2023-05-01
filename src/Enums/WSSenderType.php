@@ -2,16 +2,8 @@
 
 namespace RTC\Contracts\Enums;
 
-enum WSSenderType
+enum WSSenderType: string
 {
-    case USER;
-    case SYSTEM;
-
-    public function getValue(): string
-    {
-        return match ($this) {
-            self::USER => 'user',
-            self::SYSTEM => 'system'
-        };
-    }
+    case USER = 'user';
+    case SYSTEM = 'system';
 }
