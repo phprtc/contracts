@@ -12,6 +12,8 @@ enum WSRoomTerm: string
     case REMOVE = 'remove';
     case CREATE = 'create';
 
+    case ATTACH_INFO = 'attach_info';
+
 
     case USER_JOINED = 'user_joined';
     case USER_LEFT = 'user_left';
