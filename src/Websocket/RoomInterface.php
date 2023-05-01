@@ -15,14 +15,14 @@ interface RoomInterface
 
     /**
      * @param int|ConnectionInterface $connection
-     * @param array $metaData
+     * @param array $info
      * @param bool $notifyUsers
      * @param string|null $joinedMessage
      * @return $this
      */
     public function add(
         int|ConnectionInterface $connection,
-        array                   $metaData = [],
+        array                   $info = [],
         bool                    $notifyUsers = true,
         ?string                 $joinedMessage = null,
     ): static;
