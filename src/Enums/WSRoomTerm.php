@@ -13,6 +13,7 @@ enum WSRoomTerm: string
     case CREATE = 'create';
 
     case ATTACH_INFO = 'attach_info';
+    case INFO_ATTACHED = 'info_attached';
 
 
     case USER_JOINED = 'user_joined';
