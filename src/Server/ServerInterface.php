@@ -4,6 +4,7 @@ namespace RTC\Contracts\Server;
 
 use Closure;
 use RTC\Contracts\Enums\WSIntendedReceiver;
+use RTC\Contracts\Enums\WSSenderType;
 use RTC\Contracts\Websocket\RoomInterface;
 use Swoole\Http\Server;
 
@@ -32,6 +33,8 @@ interface ServerInterface
         int                $fd,
         string             $event,
         mixed              $data,
+        WSSenderType       $senderType,
+        string             $senderId,
         WSIntendedReceiver $receiverType,
         string             $receiverId,
         array              $meta = [],
