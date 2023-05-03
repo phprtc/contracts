@@ -69,6 +69,8 @@ interface RoomInterface
     /**
      * @param string $event
      * @param mixed $message
+     * @param int $status
+     * @param string $statusText
      * @param array $meta
      * @param array $excludeIds
      * @return int
@@ -76,6 +78,8 @@ interface RoomInterface
     public function send(
         string $event,
         mixed  $message,
+        int    $status = 200,
+        string $statusText = 'success',
         array  $meta = [],
         array  $excludeIds = []
     ): int;

@@ -16,6 +16,8 @@ interface ConnectionInterface
      * @param array $meta
      * @param WSSenderType $senderType
      * @param string $senderId
+     * @param int $status
+     * @param string $statusText
      * @param int $opcode
      * @param int $flags
      * @return void
@@ -26,6 +28,8 @@ interface ConnectionInterface
         array        $meta = [],
         WSSenderType $senderType = WSSenderType::SERVER,
         string       $senderId = 'system',
+        int          $status = 200,
+        string       $statusText = 'success',
         int          $opcode = 1,
         int          $flags = SWOOLE_WEBSOCKET_FLAG_FIN
     ): void;
