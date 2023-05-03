@@ -13,6 +13,7 @@ interface ConnectionInterface
      *
      * @param string $event
      * @param mixed $data
+     * @param array $meta
      * @param WSSenderType $senderType
      * @param string $senderId
      * @param int $opcode
@@ -22,6 +23,7 @@ interface ConnectionInterface
     public function send(
         string       $event,
         mixed        $data,
+        array        $meta = [],
         WSSenderType $senderType = WSSenderType::SERVER,
         string       $senderId = 'system',
         int          $opcode = 1,
