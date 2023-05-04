@@ -39,8 +39,8 @@ interface ServerInterface
         string             $senderId,
         WSIntendedReceiver $receiverType,
         string             $receiverId,
-        StatusCode         $status = StatusCode::OK,
         array              $meta = [],
+        StatusCode         $status = StatusCode::OK,
         int                $opcode = 1,
         int                $flags = SWOOLE_WEBSOCKET_FLAG_FIN
     ): void;
