@@ -94,7 +94,8 @@ interface RoomInterface
         ConnectionInterface $connection,
         string              $event,
         mixed               $message,
-        array               $meta = []
+        array               $meta = [],
+        StatusCode          $status = StatusCode::OK,
     ): int;
 
     /**
