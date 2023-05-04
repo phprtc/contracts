@@ -3,6 +3,7 @@
 namespace RTC\Contracts\Server;
 
 use Closure;
+use HttpStatusCodes\StatusCode;
 use RTC\Contracts\Enums\WSIntendedReceiver;
 use RTC\Contracts\Enums\WSSenderType;
 use RTC\Contracts\Websocket\ConnectionInterface;
@@ -38,6 +39,7 @@ interface ServerInterface
         string             $senderId,
         WSIntendedReceiver $receiverType,
         string             $receiverId,
+        StatusCode         $status = StatusCode::OK,
         array              $meta = [],
         int                $opcode = 1,
         int                $flags = SWOOLE_WEBSOCKET_FLAG_FIN
