@@ -2,6 +2,7 @@
 
 namespace RTC\Contracts\Websocket;
 
+use HttpStatusCodes\StatusCode;
 use RTC\Contracts\Enums\WSSenderType;
 
 interface ConnectionInterface
@@ -16,8 +17,7 @@ interface ConnectionInterface
      * @param array $meta
      * @param WSSenderType $senderType
      * @param string $senderId
-     * @param int $status
-     * @param string $statusText
+     * @param StatusCode $status
      * @param int $opcode
      * @param int $flags
      * @return void
@@ -28,8 +28,7 @@ interface ConnectionInterface
         array        $meta = [],
         WSSenderType $senderType = WSSenderType::SERVER,
         string       $senderId = 'system',
-        int          $status = 200,
-        string       $statusText = 'success',
+        StatusCode   $status = StatusCode::OK,
         int          $opcode = 1,
         int          $flags = SWOOLE_WEBSOCKET_FLAG_FIN
     ): void;

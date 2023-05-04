@@ -2,6 +2,7 @@
 
 namespace RTC\Contracts\Websocket;
 
+use HttpStatusCodes\StatusCode;
 use RTC\Contracts\Server\ServerInterface;
 use Swoole\Table;
 
@@ -69,19 +70,17 @@ interface RoomInterface
     /**
      * @param string $event
      * @param mixed $message
-     * @param int $status
-     * @param string $statusText
      * @param array $meta
      * @param array $excludeIds
+     * @param StatusCode $status
      * @return int
      */
     public function send(
-        string $event,
-        mixed  $message,
-        int    $status = 200,
-        string $statusText = 'success',
-        array  $meta = [],
-        array  $excludeIds = []
+        string     $event,
+        mixed      $message,
+        array      $meta = [],
+        array      $excludeIds = [],
+        StatusCode $status = StatusCode::OK,
     ): int;
 
     /**
