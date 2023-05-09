@@ -9,6 +9,8 @@ enum WSEvent: string
 
     case EVENT_REJECTED = 'event_rejected';
 
+    case CLOSE_CONNECTION = 'conn_close';
+
     case JOIN = 'join';
     case JOINED = 'joined';
     case MESSAGE = 'message';
