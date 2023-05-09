@@ -54,7 +54,7 @@ interface ServerInterface
 
     public function attachRoom(RoomInterface $room): static;
 
-    public function listRooms(): array
+    public function listRooms(): array;
 
     public function attachConnectionInfo(int|ConnectionInterface $connection, string $info): static;
 
