@@ -66,7 +66,7 @@ interface ServerInterface
      * @param string|null $message Message that will be sent prior to disconnection
      * @return void
      */
-    public function disconnect(
+    public function closeConnection(
         int|ConnectionInterface $connection,
         WSDisconnectMode        $mode,
         ?string $message = null
