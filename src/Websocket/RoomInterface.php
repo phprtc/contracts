@@ -107,4 +107,10 @@ interface RoomInterface
      * @return int
      */
     public function getSize(): int;
+
+    /**
+     * @param bool $withInfo Include client attached info
+     * @return array
+     */
+    public function listConnections(bool $withInfo = true): array;
 }
