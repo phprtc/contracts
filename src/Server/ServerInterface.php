@@ -4,6 +4,7 @@ namespace RTC\Contracts\Server;
 
 use Closure;
 use HttpStatusCodes\StatusCode;
+use RTC\Contracts\Enums\WSDisconnectMode;
 use RTC\Contracts\Enums\WSIntendedReceiver;
 use RTC\Contracts\Enums\WSSenderType;
 use RTC\Contracts\Websocket\ConnectionInterface;
@@ -56,6 +57,20 @@ interface ServerInterface
     public function attachConnectionInfo(int|ConnectionInterface $connection, string $info): static;
 
     public function getConnectionInfo(int|ConnectionInterface $connection): ?string;
+
+    /**
+     * Disconnect a client
+     *
+     * @param int|ConnectionInterface $connection
+     * @param WSDisconnectMode $mode
+     * @param string|null $message Message that will be sent prior to disconnection
+     * @return void
+     */
+    public function disconnect(
+        int|ConnectionInterface $connection,
+        WSDisconnectMode        $mode,
+        ?string $message = null
+    ): void;
 
     public static function get(): static;
 }
