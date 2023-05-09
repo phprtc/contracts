@@ -25,4 +25,5 @@ enum WSEvent: string
     case ROOM_CREATE = 'room_create';
     case ROOM_USER_JOINED = 'room_user_joined';
     case ROOM_USER_LEFT = 'room_user_left';
+    case ROOM_LIST_CONNECTIONS = 'room_list_connections';
 }
