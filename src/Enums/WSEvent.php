@@ -12,13 +12,14 @@ enum WSEvent: string
     case WELCOME = 'welcome';
     case CLOSE_CONNECTION = 'conn_close';
 
-    case JOIN = 'join';
-    case JOINED = 'joined';
-    case MESSAGE = 'message';
-    case LEAVE = 'leave';
-    case LEFT = 'left';
-    case REMOVE = 'remove';
-    case CREATE = 'create';
+    case ROOM_JOIN = 'room_join';
+    case ROOM_WELCOME = 'room_welcome';
+    case ROOM_JOINED = 'room_joined';
+    case ROOM_MESSAGE = 'room_message';
+    case ROOM_LEAVE = 'room_leave';
+    case ROOM_LEFT = 'room_left';
+    case ROOM_REMOVE = 'room_remove';
+    case ROOM_CREATE = 'room_create';
 
     case ATTACH_INFO = 'attach_info';
     case INFO_ATTACHED = 'info_attached';
