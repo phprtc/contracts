@@ -12,6 +12,9 @@ enum WSEvent: string
     case WELCOME = 'welcome';
     case CLOSE_CONNECTION = 'conn_close';
 
+    case ATTACH_INFO = 'attach_info';
+    case INFO_ATTACHED = 'info_attached';
+
     case ROOM_JOIN = 'room_join';
     case ROOM_WELCOME = 'room_welcome';
     case ROOM_JOINED = 'room_joined';
@@ -20,11 +23,6 @@ enum WSEvent: string
     case ROOM_LEFT = 'room_left';
     case ROOM_REMOVE = 'room_remove';
     case ROOM_CREATE = 'room_create';
-
-    case ATTACH_INFO = 'attach_info';
-    case INFO_ATTACHED = 'info_attached';
-
-
-    case USER_JOINED = 'user_joined';
-    case USER_LEFT = 'user_left';
+    case ROOM_USER_JOINED = 'room_user_joined';
+    case ROOM_USER_LEFT = 'room_user_left';
 }
