@@ -54,6 +54,8 @@ interface ServerInterface
 
     public function attachRoom(RoomInterface $room): static;
 
+    public function listRooms(): array
+
     public function attachConnectionInfo(int|ConnectionInterface $connection, string $info): static;
 
     public function getConnectionInfo(int|ConnectionInterface $connection): ?string;
@@ -69,7 +71,7 @@ interface ServerInterface
     public function closeConnection(
         int|ConnectionInterface $connection,
         WSDisconnectMode        $mode,
-        ?string $message = null
+        ?string                 $message = null
     ): void;
 
     public static function get(): static;
