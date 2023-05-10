@@ -60,12 +60,6 @@ interface RoomInterface
     public function getClients(): Table;
 
     /**
-     * @param int|ConnectionInterface $connection
-     * @return array|null
-     */
-    public function getMetaData(int|ConnectionInterface $connection): ?array;
-
-    /**
      * @param string $event
      * @param mixed $message
      * @param array $meta
