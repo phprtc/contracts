@@ -53,4 +53,14 @@ interface WebsocketHandlerInterface
      * @return void
      */
     public function onError(ConnectionInterface $connection, Throwable $exception): void;
+
+    /**
+     * Forwards room message to all subscribes
+     *
+     * @param RoomInterface $room
+     * @param ConnectionInterface $connection
+     * @param EventInterface $event
+     * @return void
+     */
+    public function forwardRoomMessage(RoomInterface $room, ConnectionInterface $connection, EventInterface $event): void;
 }
