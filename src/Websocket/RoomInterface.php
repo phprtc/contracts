@@ -81,6 +81,7 @@ interface RoomInterface
      * @param mixed $message
      * @param array $meta
      * @param StatusCode $status
+     * @param bool $isForwarding
      * @return int
      */
     public function sendAsClient(
@@ -89,7 +90,9 @@ interface RoomInterface
         mixed               $message,
         array               $meta = [],
         StatusCode          $status = StatusCode::OK,
+        bool                $isForwarding = false,
     ): int;
+
 
     /**
      * @return string

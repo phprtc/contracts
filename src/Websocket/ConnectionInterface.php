@@ -30,7 +30,8 @@ interface ConnectionInterface
         string       $senderId = 'system',
         StatusCode   $status = StatusCode::OK,
         int          $opcode = 1,
-        int          $flags = SWOOLE_WEBSOCKET_FLAG_FIN
+        int          $flags = SWOOLE_WEBSOCKET_FLAG_FIN,
+        bool         $isForwarding = false,
     ): void;
 
     /**
