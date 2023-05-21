@@ -109,4 +109,11 @@ interface RoomInterface
      * @return array
      */
     public function listConnections(bool $withInfo = true): array;
+
+    /**
+     * List of whitelisted event names
+     *
+     * @return array
+     */
+    public function getWhitelistEvents(): array;
 }
