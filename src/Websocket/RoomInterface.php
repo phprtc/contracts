@@ -65,6 +65,7 @@ interface RoomInterface
      * @param array $meta
      * @param array $excludeIds
      * @param StatusCode $status
+     * @param bool $isForwarding
      * @return int
      */
     public function send(
@@ -73,6 +74,7 @@ interface RoomInterface
         array      $meta = [],
         array      $excludeIds = [],
         StatusCode $status = StatusCode::OK,
+        bool                $isForwarding = false,
     ): int;
 
     /**
